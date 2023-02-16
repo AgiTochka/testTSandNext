@@ -1,0 +1,20 @@
+.conteiner {
+    width: 80vw;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.block {
+    padding: 25px;
+}
+
+.p {
+    font-size: 18px;
+    text-align: center;
+}
+
+.h1 {
+    text-align: center;
+}

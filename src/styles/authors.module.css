@@ -1,0 +1,30 @@
+.conteiner {
+    width: 80vw;
+    margin: auto;
+}
+
+.user_card {
+    margin: 15px;
+    padding: 20px;
+    background-color: #eca7fa;
+}
+
+.h2 {
+
+    color: blueviolet;
+    font-size: 20px;
+    padding: 10px;
+}
+
+.link {
+    text-decoration: none;
+}
+
+.p {
+    font-size: 18px;
+}
+
+.h1 {
+    color: #000;
+    text-align: center;
+}

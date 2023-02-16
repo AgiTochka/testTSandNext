@@ -1,0 +1,23 @@
+.conteiner {
+    width: 80vw;
+    margin: auto;
+}
+
+.content {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+.p {
+    width: 50%;
+    align-self: center;
+    padding: 25px;
+}
+.pic{
+    
+}
+
+.h1{
+    text-align: center;
+}

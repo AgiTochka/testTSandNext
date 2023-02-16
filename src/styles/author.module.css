@@ -1,0 +1,21 @@
+.card{
+    width: 33%;
+    margin: 15px;
+    padding: 20px;
+    background-color: #eca7fa;
+}
+.conteiner{
+    width: 80%;
+    margin: auto;
+}
+
+.h1{
+    color: blueviolet;
+    font-size: 32px;
+    padding: 10px;
+}
+
+.ul{
+    padding: 15px;
+    font-size: 18px;
+}

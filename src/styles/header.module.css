@@ -1,0 +1,18 @@
+.header{
+    width: 100vw;
+    background-color: #520072;
+    padding: 15px;
+}
+
+.link{
+    text-decoration: none;
+    color: white;
+    margin: 15px;
+    font-size: 22px;
+
+
+}
+.conteiner{
+    width: 80vw;
+    margin: auto;
+  }
