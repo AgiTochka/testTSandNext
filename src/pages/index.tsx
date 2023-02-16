@@ -3,10 +3,19 @@ import styles from "@/styles/index.module.css";
 import Image from 'next/image';
 import pic1 from '@/img/3_Image.jpg';
 import pic2 from '@/img/f90555c3ec85099451ac4ba090dda9d5.jpg';
+import Head from "next/head";
 
 const Index = () => {
   return (
     <>
+      <Head>
+        <title>My page title</title>
+        <meta property="og:title" content="My page title" key="title" />
+      </Head>
+      <Head>
+        <meta property="og:title" content="My new title" key="title" />
+        <title>Test</title>
+      </Head>
       <Header></Header>
       <div className={styles.conteiner}>
         <h1 className={styles.h1}>Главная страница</h1>

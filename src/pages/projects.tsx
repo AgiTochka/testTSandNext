@@ -1,6 +1,7 @@
 import Header from "@/conteiner/header";
 import { GetStaticProps, InferGetStaticPropsType } from "next";
 import styles from '@/styles/project.module.css';
+import Head from "next/head";
 
 type PhotoType = {
     albumId: number,
@@ -13,6 +14,10 @@ type PhotoType = {
 const Project: React.FC = ({ photos }: InferGetStaticPropsType<typeof getStaticProps>) => {
     return (
         <>
+            <Head>
+                <meta property="og:title" content="My new title" key="title" />
+                <title>Test</title>
+            </Head>
             <Header></Header>
             <h1 className={styles.h1}>Проекты</h1>
             <div className={styles.conteiner}>

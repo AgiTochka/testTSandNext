@@ -1,7 +1,7 @@
 import Header from "@/conteiner/header";
 import { GetServerSideProps, InferGetServerSidePropsType } from "next";
 import styles from '@/styles/author.module.css';
-
+import Head from "next/head";
 type UserType = {
     id: number,
     name: string,
@@ -29,6 +29,10 @@ type UserType = {
 const Author = ({ user }: InferGetServerSidePropsType<typeof getServerSideProps>) => {
     return (
         <>
+            <Head>
+                <meta property="og:title" content="My new title" key="title" />
+                <title>Test</title>
+            </Head>
             <Header></Header>
             <div className={styles.conteiner}>
                 <div className={styles.card}>
@@ -47,10 +51,10 @@ const Author = ({ user }: InferGetServerSidePropsType<typeof getServerSideProps>
 };
 export default Author;
 
-export const getServerSideProps: GetServerSideProps = async ({params}: InferGetServerSidePropsType<typeof getServerSideProps>) => {
-        const response = await fetch(`https://jsonplaceholder.typicode.com/users/${params.id}`);
-        const user: UserType = await response.json();
-        return {
-            props: { user },
-        }
+export const getServerSideProps: GetServerSideProps = async ({ params }: InferGetServerSidePropsType<typeof getServerSideProps>) => {
+    const response = await fetch(`https://jsonplaceholder.typicode.com/users/${params.id}`);
+    const user: UserType = await response.json();
+    return {
+        props: { user },
+    }
 }

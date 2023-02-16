@@ -2,7 +2,7 @@ import Header from "@/conteiner/header"
 import { GetStaticProps, InferGetStaticPropsType } from "next";
 import styles from '../styles/authors.module.css';
 import Link from "next/link";
-
+import Head from "next/head";
 type UserType = {
     id: number,
     name: string,
@@ -27,9 +27,13 @@ type UserType = {
     }
 }
 
-const Authors : React.FC = ({ users }: InferGetStaticPropsType<typeof getStaticProps>) => {
+const Authors: React.FC = ({ users }: InferGetStaticPropsType<typeof getStaticProps>) => {
     return (
         <>
+            <Head>
+                <meta property="og:title" content="My new title" key="title" />
+                <title>Test</title>
+            </Head>
             <Header></Header>
             <h1 className={styles.h1}>Авторы</h1>
             <div className={styles.conteiner}>
@@ -60,6 +64,6 @@ export const getStaticProps: GetStaticProps = async (context) => {
     const response = await fetch("https://jsonplaceholder.typicode.com/users");
     const users: UserType[] = await response.json();
     return {
-        props: { users }, 
+        props: { users },
     }
 }
